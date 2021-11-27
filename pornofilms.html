@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Макет</title>
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+	</head>
+	<body>
+		<div class="light">
+			<input type="range" id="rng_light" step="1" value="50" oninput="test()">
+		</div>
+		<header class="header">
+			<div class="container">
+				<div class="header_body">
+					<div class="logo">
+						<div class="logo_img">
+							
+						</div>
+					</div>
+					<nav class="nav">
+						<div class="key1">
+							<p class="text_key_nav"><a href="catalog.html" class="url_key">Каталог</a> </p>
+						</div>
+						<div class="key2">
+							<p class="text_key_nav">О нас</p>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<div class="page">
+			<div class="container" id="container" onclick="swap_to_light_container()">
+				<main class="main">
+					<section class="player_block">
+						<div class="loading">
+							<iframe src="https://www.youtube.com/embed/DfUDfzWqfG4" width="100%"
+							height="100%"
+							frameborder="none"></iframe>
+						</div>
+					</section>
+					<section class="add_inform">
+						<div class="text_add_inform" id="text_add_inform" onclick="swap_to_light_text_add_inform()" >
+							<p>«Порнофильмы» — российская панк-группа из города Дубна, основанная в 2008 году. В настоящее время в состав «Порнофильмов» входят вокалист и автор текстов Владимир Котляров, гитарист Вячеслав Селезнёв, гитарист и менеджер группы Александр Русаков, барабанщик Кирилл Муравьёв и басист Александр Агафонов. Коллектив выделяется на фоне других российских панк-рок групп сильно политизированными текстами песен, а также пропагандой здорового образа жизни, все участники группы — вегетарианцы, не употребляют алкоголь, наркотики и не курят. Группа «Порнофильмы» была популярна в Дубне в ранние годы выступлений, а после выпуска своего четвёртого альбома «В диапазоне между отчаянием и надеждой» и отмены ряда концертов по настоянию местных властей получила большую известность и стала одним из ведущих исполнителей панка в России. В настоящее время у группы «Порнофильмы» насчитывается 13 релизов, включая 8 студийных альбомов и 5 мини-альбомов. Последний студийный альбом, «Это пройдёт», вышел в 2020 году.</p>
+						</div>
+						<div class="add_audio_for_film">
+							<audio class="audio" controls>
+								<source src="music/lesnik.mp3" type="">
+							</audio>
+							<audio class="audio" controls>
+								<source src="music/lesnik.mp3" type="">
+							</audio>
+							<audio class="audio" controls>
+								<source src="music/lesnik.mp3" type="">
+							</audio>
+							<audio class="audio" controls>
+								<source src="music/lesnik.mp3" type="">
+							</audio>
+							<audio class="audio" controls>
+								<source src="music/lesnik.mp3" type="">
+							</audio>
+							<audio class="audio" controls>
+								<source src="music/lesnik.mp3" type="">
+							</audio>
+							<audio class="audio" controls>
+								<source src="music/lesnik.mp3" type="">
+							</audio>
+							<audio class="audio" controls>
+								<source src="music/lesnik.mp3" type="">
+							</audio>
+							<audio class="audio" controls>
+								<source src="music/lesnik.mp3" type="">
+							</audio>
+							<audio class="audio" controls>
+								<source src="music/lesnik.mp3" type="">
+							</audio>
+						</div>
+					</section>
+				</main>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script type="text/javascript" src = "scripts/script.js"></script>
+	</body>
+</html>

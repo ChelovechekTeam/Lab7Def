@@ -1,0 +1,225 @@
+*, *:after, *:before{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background: url("../img/background3.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+}
+.container{
+	width: 70%;
+	margin: 0 auto;
+	height: 100%;
+	padding: 0 40px;
+	background: rgba(255, 255, 255, 0.3);
+}
+.light{
+	position: fixed;
+	z-index: 1000;
+	left: 10px;
+	top: 5px;
+	height: 60px;
+	background: rgba(0, 0, 0, 1.0);
+	/*transform: rotate(90deg);*/
+}
+	/*.light:before{
+		content: ' ';
+		position: absolute;
+		width: 60px;
+		height: 60px;
+		background: url("../img/light1.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+
+	}*/
+	#rng_light{
+		position: absolute;
+		left: 10px;
+		top: 40px;
+		width: 200px;
+		-webkit-appearance: none;
+		height: 2px;
+		outline: none;
+		background: grey;
+	}
+	#rng_light::-webkit-slider-thumb{
+		background: url("../img/light1.png");
+		background-size: cover;
+		width: 30px;
+		height: 30px;
+		-webkit-appearance: none;
+		appearance: none;
+	}
+header .container {
+	background: black;
+}
+.header{
+	position: absolute;
+	width: 100%;
+	height: 70px;
+	background: black;
+}
+	.header_body{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+		.logo{
+			padding: 2.5px;
+			width: 30%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			background: rgba(0, 0, 0, 0.5);
+		}
+			.logo_img{
+				background-image: url("../img/logo.png");
+				height: 65px;
+				width: 65px;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				border-radius: 40%;
+				border: 3px solid white;
+			}
+		.nav{
+			height: 100%;
+			display: flex;
+			padding: 5px;
+			align-items: center;
+			justify-content: center;
+		}
+			.text_key_nav{
+				font-size: 30px;
+				color: white;
+				margin: 40px;
+			}
+			.text_key_nav:hover{
+				text-decoration: underline;
+				color: gold;
+			}
+			.url_key{
+				text-decoration: inherit;
+				color: inherit;
+			}
+.page{
+	width: 100%;
+	height: 100%;
+}
+	.main{
+		padding: 10px;
+		padding-top: 80px;
+		min-height: 100vh;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+		/*main task*/
+		.player_block{
+			width: 100%;
+			height: 400px;
+			padding: 10px;
+			background: black;
+		}
+		.loading{
+			width: 100%;
+			height: 100%;
+			background: url("../img/loading_player.jpg");
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		#video{
+			width: 100%;
+			height: 100%;
+		}
+		.add_inform{
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			height: 100%;
+		}
+			.text_add_inform{
+				margin-top: 7px;
+				background: rgba(0, 0, 0, 0.5);
+				padding: 20px;
+				font-size: 22px;
+				width: 60%;
+				height: 100%;
+				color: white;
+			}
+			.add_audio_for_film{
+				width: 40%;
+				margin-top: 7px;
+				height: 100%;
+			}
+				.audio{
+					margin: 5px;
+					float: right;
+				}
+		/*catalog*/
+		#main_catalog{
+			display: grid;
+			grid-template-rows: auto;
+		}
+		.blocks{
+			margin: 5px;
+			background: black;
+		}
+		.blocks:hover{
+			cursor: pointer;
+			box-shadow: 2px 2px 2px black, -2px -2px 2px black,-2px 2px 2px black,2px -2px 2px black;
+		}
+		.insert_bg{
+			width: 100%;
+			height: 100%;
+			background: white;
+		}
+			#kish{
+				background: url("../img/Kish_logo2.jpg") white;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				border: 4px solid black;
+			}
+			#pfilmy{
+				background: url("../img/pornofilmi_logo.jpg") black;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				border: 4px solid black;
+			}
+			#coi{
+				background: url("../img/coi_logo.jpg") white;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				border: 4px solid black;
+			}
+			#zveri{
+				background: url("../img/zveri_logo.jpg") black;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				border: 4px solid black;
+			}
+/*@media (max-width: 1100px){
+	.container{
+		width: 80%;
+		padding: 0 20px;
+	}
+}
+@media (max-width: 900px){
+	.container{
+		padding: 0 15px;
+		width: 100%;
+	}
+}*/

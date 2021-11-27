@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Макет</title>
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+	</head>
+	<body>
+		<div class="light">
+			<input type="range" id="rng_light" step="1" value="50" oninput="test()">
+		</div>
+		<header class="header">
+			<div class="container">
+				<div class="header_body">
+					<div class="logo">
+						<div class="logo_img">
+							
+						</div>
+					</div>
+					<nav class="nav">
+						<div class="key1">
+							<p class="text_key_nav"><a href="#" class="url_key">Каталог</a></p>
+						</div>
+						<div class="key2">
+							<p class="text_key_nav">О нас</p>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<div class="page">
+			<div class="container" id="container" onclick="swap_to_light_container()">
+				<main class="main" id= "main_catalog">
+					<section class="blocks " id = "kish" onclick="location.href='index.html';"></section>
+					<section class="blocks " id = "pfilmy" onclick="location.href='pornofilms.html';"></section>
+					<section class="blocks " id="coi" onclick="location.href='pornofilms.html';">				
+					</section>
+					<section class="blocks " id="zveri" onclick="location.href='pornofilms.html';">				
+					</section>
+					<section class="blocks "></section>
+					<section class="blocks "></section>
+					<section class="blocks "></section>
+
+				</main>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script type="text/javascript" src = "scripts/script.js"></script>
+		<script type="text/javascript" src = "scripts/test.js"></script>
+	</body>
+</html>
