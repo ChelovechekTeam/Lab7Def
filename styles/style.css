@@ -164,7 +164,15 @@ header .container {
 				.audio{
 					margin: 5px;
 					float: right;
+					-webkit-appearance: none;
+					appearance: none;
+					border: 1px white solid;
+					background: white;
 				}
+					.button button{
+						margin: 0 5px;
+						padding: 0 5px;
+					}
 		/*catalog*/
 		#main_catalog{
 			display: grid;

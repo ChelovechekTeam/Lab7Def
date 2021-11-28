@@ -6,6 +6,7 @@
 		<title>Макет</title>
 		<link rel="stylesheet" type="text/css" href="styles/style.css">
 		<link rel="icon" href="img/favicon.png">
+		<link rel="preload" href="music/lesnik.mp3" as="audio">
 	</head>
 	<body>
 		<div class="light">
@@ -47,9 +48,20 @@
 							Изначально преобладающий в музыкальной составляющей ритмичный хоррор-панк со временем вышел за границы стиля и вобрал в себя множество музыкальных элементов: фолк-рок («Акустический альбом»), арт-панк («Театр демона»), хардкор-панк («Бунт на корабле»), хард-рок («Как в старой сказке») и многие другие. На раннем этапе сильное влияние на группу оказали The Beatles</p>
 						</div>
 						<div class="add_audio_for_film">
-							<audio class="audio" controls>
-								<source src="music/lesnik.mp3" type="">
-							</audio>
+							<audio id="player" src="music/lesnik.mp3"></audio>
+							<div style="display: flex; flex-direction: column; justify-content: flex-end; background:white; border: 1px solid black; padding: 5px;"> 
+								<div class="dur_progress" style="display:flex; justify-content: center;">
+									<div id="duration">
+									</div>
+									<progress value="0" max="100" style=" border: 1px solid white;"></progress>
+								</div>
+								<div class="button" style="display:flex; justify-content: flex-end;">
+									<button onclick="audio_start()">Play</button> 
+									<button onclick="document.getElementById('player').pause()">Pause</button> 
+									<button onclick="document.getElementById('player').volume += 0.1">Vol +</button> 
+									<button onclick="document.getElementById('player').volume -= 0.1">Vol -</button> 
+								</div>
+							</div>
 							<audio class="audio" controls>
 								<source src="music/lesnik.mp3" type="">
 							</audio>
@@ -82,6 +94,7 @@
 				</main>
 			</div>
 		</div>
+		<script type="text/javascript" src = "scripts/audio.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 		<script type="text/javascript" src = "scripts/script.js"></script>
 	</body>
