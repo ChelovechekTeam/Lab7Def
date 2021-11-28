@@ -1,3 +1,4 @@
+setTimeout(() => {
 let duration = 0;
 duration = Number(document.getElementById('player').duration);
 duration = Math.trunc(duration);
@@ -5,6 +6,7 @@ let minute = Math.trunc(duration / 60);
 let sec = duration - minute * 60;
 let duration_string = minute + ":" + sec;
 document.getElementById('duration').innerHTML = "0:00 <strong> / </strong> " + duration_string;
+}, 100);
 function audio_start() {
 	let duration = document.getElementById('player').duration;
 	duration = Math.trunc(duration);

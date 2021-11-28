@@ -80,14 +80,13 @@ header .container {
 			background: rgba(0, 0, 0, 0.5);
 		}
 			.logo_img{
-				background-image: url("../img/logo.png");
+				background-image: url("../img/favicon.png");
 				height: 65px;
 				width: 65px;
 				background-size: contain;
 				background-repeat: no-repeat;
 				background-position: center;
 				border-radius: 40%;
-				border: 3px solid white;
 			}
 		.nav{
 			height: 100%;
