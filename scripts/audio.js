@@ -29,6 +29,7 @@ function audio_start() {
 	cheker_minute = 0;	
 	timer = setInterval(() =>
 		{
+			alert(1);
 			current_time = Math.trunc(document.getElementById('player').currentTime);
 			var sec_current = current_time - minunte_current * 60;
 			while(sec_current < 0)
