@@ -14,7 +14,7 @@ function swap_music(test){
 		duration_string = minute + ":" + sec;
 		slider.value = 0;
 		document.getElementById('duration').innerHTML = "0:00 <strong> / </strong> " + duration_string;
-	}, 100);
+	}, 300);
 
 }
 function audio_start() {
