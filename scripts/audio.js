@@ -1,9 +1,11 @@
 
 function skip(){
+	alert(4);
 	current_time = slider.value*prg;
 	document.getElementById('player').currentTime = current_time;
 }
 function swap_music(test){
+	alert(3);
 	document.getElementById('player').src = $(test).next().attr('src');
 	document.getElementById('title').innerHTML = $(test).next().text();
 	setTimeout(() => {
