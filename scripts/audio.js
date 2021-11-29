@@ -1,11 +1,9 @@
 
 function skip(){
-	alert(4);
 	current_time = slider.value*prg;
 	document.getElementById('player').currentTime = current_time;
 }
 function swap_music(test){
-	alert(3);
 	document.getElementById('player').src = $(test).next().attr('src');
 	document.getElementById('title').innerHTML = $(test).next().text();
 	setTimeout(() => {
@@ -27,11 +25,9 @@ function audio_start() {
 	slider.style.cssText = "";
 	sl_val = 0;
 	prg = duration / 100;
-	cheker_minute = 0;
-	alert(5);	
+	cheker_minute = 0;	
 	timer = setInterval(() =>
 		{
-			alert(1);
 			current_time = Math.trunc(document.getElementById('player').currentTime);
 			var sec_current = current_time - minunte_current * 60;
 			while(sec_current < 0)
