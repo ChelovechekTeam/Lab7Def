@@ -6,7 +6,7 @@ function size_blocks(){
 	var max_count_blocks_in_line = 1; 
 	while (key == 0)
 	{
-		if(width_document/max_count_blocks_in_line >= 200)
+		if(width_document/max_count_blocks_in_line >= 300)
 		{
 			width_document -= 10;
 			max_count_blocks_in_line++;
