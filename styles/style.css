@@ -163,14 +163,29 @@ header .container {
 				.audio{
 					margin: 5px;
 					float: right;
-					-webkit-appearance: none;
-					appearance: none;
 					border: 1px white solid;
 					background: white;
 				}
 					.button button{
 						margin: 0 5px;
 						padding: 0 5px;
+					}
+					#rng_audio{
+						-webkit-appearance: none;
+						appearance: none;
+						outline: none;
+						height: 2px;
+						background: black;
+						margin-top: 8px;
+						margin-left: 5px;
+					}
+					#rng_audio::-webkit-slider-thumb{
+						appearance: none;
+						width: 10px;
+						background: #484C80;
+						height: 10px;
+						border-radius: 5px;
+						border: 1px solid #484C80;
 					}
 		/*catalog*/
 		#main_catalog{
