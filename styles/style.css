@@ -168,24 +168,53 @@ header .container {
 				}
 					.button button{
 						margin: 0 5px;
-						padding: 0 5px;
+						margin: 5px 0px;
+
+						background: none;
+						border: 0;
+						width: 30px;
+						height: 30px;
+					}
+					.button button img{
+						width: 100%;
+						height: 100%;
 					}
 					#rng_audio{
 						-webkit-appearance: none;
 						appearance: none;
 						outline: none;
 						height: 2px;
-						background: black;
+						background: white;
 						margin-top: 8px;
 						margin-left: 5px;
 					}
 					#rng_audio::-webkit-slider-thumb{
 						appearance: none;
 						width: 10px;
-						background: #484C80;
+						background:white;
 						height: 10px;
 						border-radius: 5px;
-						border: 1px solid #484C80;
+						border: 1px solid grey;
+					}
+				.block_for_title_audio{
+					padding: 5px;
+				}
+					.titles_audio{
+						width: 100%;
+						height: 100%;
+						padding: 2px;
+						display: flex;
+						justify-content: flex-start;
+						text-align: center;
+						background: rgba(0, 0, 0, 0.5);
+					}
+					.titles_audio p{
+						font-size: 20px;
+						padding: 5px 10px;
+						color: white;
+					}
+					.titles_audio img{
+						padding: 2px;
 					}
 		/*catalog*/
 		#main_catalog{

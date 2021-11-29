@@ -49,53 +49,61 @@
 						</div>
 						<div class="add_audio_for_film">
 							<audio id="player" src="music/lesnik.mp3"></audio>
-							<div style="display: flex; flex-direction: column; justify-content: flex-end; background:white; border: 1px solid black; padding: 5px;"> 
+							<div style="display: flex; flex-direction: column; justify-content: flex-end; background:rgba(0, 0, 0, 0.7); border: 1px solid white; padding: 5px;"> 
+								<div id="title" style="text-align: center; color:white; font-size: 25px;">Лесник</div>
 								<div class="dur_progress" style="display:flex; justify-content: center;">
-									<div id="duration">
+									<div id="duration" style="color: white; font-size:18px;">
 									</div>
 									<input type="range" id="rng_audio" step="1" value="0" oninput="skip()">
 								</div>
 								<div class="button" style="display:flex; justify-content: flex-end;">
-									<button onclick="audio_start()">Play</button> 
-									<button onclick="document.getElementById('player').pause()">Pause</button> 
-									<button onclick="document.getElementById('player').volume += 0.1">Vol +</button> 
-									<button onclick="document.getElementById('player').volume -= 0.1">Vol -</button> 
+									<button style = "width: 200px; height: 200px;"><object style="width: 100%; height: 100%;" data="icons/play1.svg"></object></button> 
+									<button><object onclick="document.getElementById('player').pause()" style="widows: 100%; height: 100%;" data="icons/columns.svg"></object></button> 
+									<button onclick="document.getElementById('player').volume += 0.1"><img src="icons/plus-circle.svg"></button> 
+									<button onclick="document.getElementById('player').volume -= 0.1"><img src="icons/no-entry.svg"></button> 
+									<button onclick="mute()"><img src="icons/mute.svg"></button> 
 								</div>
 							</div>
-							<audio class="audio" controls>
-								<source src="music/lesnik.mp3" type="">
-							</audio>
-							<audio class="audio" controls>
-								<source src="music/lesnik.mp3" type="">
-							</audio>
-							<audio class="audio" controls>
-								<source src="music/lesnik.mp3" type="">
-							</audio>
-							<audio class="audio" controls>
-								<source src="music/lesnik.mp3" type="">
-							</audio>
-							<audio class="audio" controls>
-								<source src="music/lesnik.mp3" type="">
-							</audio>
-							<audio class="audio" controls>
-								<source src="music/lesnik.mp3" type="">
-							</audio>
-							<audio class="audio" controls>
-								<source src="music/lesnik.mp3" type="">
-							</audio>
-							<audio class="audio" controls>
-								<source src="music/lesnik.mp3" type="">
-							</audio>
-							<audio class="audio" controls>
-								<source src="music/lesnik.mp3" type="">
-							</audio>
+							<div class="block_for_title_audio">
+								<div class="titles_audio">
+									<img src="icons/play.svg" onclick="swap_music(this)">
+									<div src="music/lesnik.mp3">
+										<p>Лесник</p>
+									</div>
+								</div>
+								<div class="titles_audio">
+									<img src="icons/play.svg" onclick="swap_music(this)">
+									<div src="music/kykla_kolduna.mp3">
+										<p>Кукла колдуна</p>
+									</div>
+								</div>
+								<div class="titles_audio">
+									<img src="icons/play.svg" onclick="swap_music(this)">
+									<div src="music/staryi_dom.mp3">
+										<p>Проклятый старый дом</p>
+									</div>
+								</div>
+								<div class="titles_audio">
+									<img src="icons/play.svg" onclick="swap_music(this)">
+									<div src="music/dyrak.mp3">
+										<p>Дурак и молния</p>
+									</div>
+								</div>
+								<div class="titles_audio">
+									<img src="icons/play.svg" onclick="swap_music(this)">
+									<div src="music/prigny_so_skali.mp3">
+										<p>Прыгну со скалы</p>
+									</div>
+								</div>
+							</div>
 						</div>
 					</section>
 				</main>
 			</div>
 		</div>
-		<script type="text/javascript" src = "scripts/audio.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script type="text/javascript" src = "scripts/audio.js"></script>
 		<script type="text/javascript" src = "scripts/script.js"></script>
+		<script type="text/javascript" src = "scripts/resize_icons_player.js"></script>
 	</body>
 </html>
