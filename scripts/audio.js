@@ -28,7 +28,8 @@ function audio_start() {
 	slider.style.cssText = "";
 	sl_val = 0;
 	prg = duration / 100;
-	cheker_minute = 0;	
+	cheker_minute = 0;
+	alert(5);	
 	timer = setInterval(() =>
 		{
 			alert(1);
