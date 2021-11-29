@@ -85,4 +85,4 @@ duration_string = minute + ":" + sec;
 prg = duration / 100;
 slider = document.getElementById('rng_audio');
 document.getElementById('duration').innerHTML = "0:00 <strong> / </strong> " + duration_string;
-}, 100);
+}, 300);
