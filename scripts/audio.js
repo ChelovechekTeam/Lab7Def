@@ -19,7 +19,6 @@ function swap_music(test){
 	}, 100);
 
 }
-alert(2);
 function audio_start() {
 	document.getElementById('player').play();
 	current_time = 0;
