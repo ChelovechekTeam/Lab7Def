@@ -6,7 +6,7 @@
 		<title>Макет</title>
 		<link rel="stylesheet" type="text/css" href="styles/style.css">
 		<link rel="icon" href="img/favicon.png">
-		<link rel="preload" href="music/lesnik.mp3" as="audio">
+		<link rel="preload" href="music/lesnik.mp3">
 	</head>
 	<body>
 		<div class="light">
@@ -32,79 +32,80 @@
 			</div>
 		</header>
 		<div class="page">
-			<div class="container" id="container" onclick="swap_to_light_container()">
+			<div class="container" id="container">
 				<main class="main">
 					<section class="player_block">
-						<div class="loading">
-							<iframe src="https://www.youtube.com/embed/FZohsFtNXuE" frameborder="none" width="100%"
-							height="100%" allowfullscreen></iframe>
+						<div class="thumb-wrap">
+							<iframe src="https://www.youtube.com/embed/FZohsFtNXuE" class="iframe" allowfullscreen></iframe>
 						</div>
 					</section>
 					<section class="add_inform">
-						<div class="text_add_inform" id="text_add_inform" onclick="swap_to_light_text_add_inform()" >
+						<div class="text_add_inform" id="text_add_inform">
 							<p>«Король и Шут» (сокращённо «КиШ») — российская хоррор-панк-группа из Санкт-Петербурга.
 								Группа была образована в Ленинграде в 1988 году. После смерти её лидера и одного из основателей Михаила Горшенёва 19 июля 2013 года выступает только в рок-мюзикле TODD.
 								Выделяется своим необычным для классического панк-рока стилем. Песни группы представляют собой небольшие законченные истории, часто в фэнтезийном, мистическом, а также историческом ключе. Сценический имидж группы постоянно менялся и часто включал в себя грим, соответствующий тематике песен. В прессе группа неоднократно обозначалась как «культовая».
 							Изначально преобладающий в музыкальной составляющей ритмичный хоррор-панк со временем вышел за границы стиля и вобрал в себя множество музыкальных элементов: фолк-рок («Акустический альбом»), арт-панк («Театр демона»), хардкор-панк («Бунт на корабле»), хард-рок («Как в старой сказке») и многие другие. На раннем этапе сильное влияние на группу оказали The Beatles</p>
 						</div>
 						<div class="add_audio_for_film">
-							<audio id="player" src="music/lesnik.mp3"></audio>
-							<div style="display: flex; flex-direction: column; justify-content: flex-end; background:rgba(0, 0, 0, 0.7); border: 1px solid white; padding: 5px;"> 
-								<div id="title" style="text-align: center; color:white; font-size: 25px; padding-bottom: 5px;">Лесник</div>
-								<div class="dur_progress" style="display:flex; justify-content: center;">
-									<div id="duration" style="color: white; font-size:18px;">
-									</div>
-									<input type="range" id="rng_audio" step="1" value="0" oninput="skip()">
+						<audio id="player" volume = "0" src="music/lesnik.mp3"></audio>
+						<div id="audio_block">
+							<div id="title">Лесник</div>
+							<div class="dur_progress" style="display:flex; justify-content: center; align-items: center;">
+								<div id="duration">
 								</div>
-								<!---tet!--->
-								<div class="button" style="display:flex; justify-content: flex-end;">
-									<button onclick="audio_start()"><img src="icons/play1.svg"></button> 
-									<button onclick="document.getElementById('player').pause()"><img src="icons/columns.svg"></button> 
-									<button onclick="document.getElementById('player').volume += 0.1"><img src="icons/plus-circle.svg"></button> 
-									<button onclick="document.getElementById('player').volume -= 0.1"><img src="icons/no-entry.svg"></button> 
-									<button onclick="mute()"><img src="icons/mute.svg"></button> 
+								<input type="range" id="rng_audio" step="1" value="0" oninput="skip()">
+							</div>
+							<div class="button" style="display:flex; justify-content: flex-end;">
+								<button onclick="audio_start(), swap_pause_play(this)"><img src="icons/play1.svg"></button>
+								<button style="display: none;"onclick="document.getElementById('player').pause(),swap_pause_play(this)"><img src="icons/columns.svg"></button>
+								<div class="volume_block" >
+									<button onclick="document.getElementById('player').volume += 0.1, volume()"><img src="icons/plus-circle.svg"></button>
+									<p style="color: white;" class="volume_p">100%</p>
+									<button onclick="document.getElementById('player').volume -= 0.1, volume()"><img src="icons/no-entry.svg"></button>
+								</div>
+								<button onclick="mute()"><img src="icons/mute.svg"></button>
+							</div>
+						</div>
+						<div id="block_for_title_audio">
+							<div class="titles_audio">
+								<img src="icons/play.svg" onclick="swap_music(this)">
+								<div src="music/lesnik.mp3">
+									<p>Лесник</p>
 								</div>
 							</div>
-							<div class="block_for_title_audio">
-								<div class="titles_audio">
-									<img src="icons/play.svg" onclick="swap_music(this)">
-									<div src="music/lesnik.mp3">
-										<p>Лесник</p>
-									</div>
+							<div class="titles_audio">
+								<img src="icons/play.svg" onclick="swap_music(this)">
+								<div src="music/kykla_kolduna.mp3">
+									<p>Кукла колдуна</p>
 								</div>
-								<div class="titles_audio">
-									<img src="icons/play.svg" onclick="swap_music(this)">
-									<div src="music/kykla_kolduna.mp3">
-										<p>Кукла колдуна</p>
-									</div>
+							</div>
+							<div class="titles_audio">
+								<img src="icons/play.svg" onclick="swap_music(this)">
+								<div src="music/staryi_dom.mp3">
+									<p>Проклятый старый дом</p>
 								</div>
-								<div class="titles_audio">
-									<img src="icons/play.svg" onclick="swap_music(this)">
-									<div src="music/staryi_dom.mp3">
-										<p>Проклятый старый дом</p>
-									</div>
+							</div>
+							<div class="titles_audio">
+								<img src="icons/play.svg" onclick="swap_music(this)">
+								<div src="music/dyrak.mp3">
+									<p>Дурак и молния</p>
 								</div>
-								<div class="titles_audio">
-									<img src="icons/play.svg" onclick="swap_music(this)">
-									<div src="music/dyrak.mp3">
-										<p>Дурак и молния</p>
-									</div>
-								</div>
-								<div class="titles_audio">
-									<img src="icons/play.svg" onclick="swap_music(this)">
-									<div src="music/prigny_so_skali.mp3">
-										<p>Прыгну со скалы</p>
-									</div>
+							</div>
+							<div class="titles_audio">
+								<img src="icons/play.svg" onclick="swap_music(this)">
+								<div src="music/prigny_so_skali.mp3">
+									<p>Прыгну со скалы</p>
 								</div>
 							</div>
 						</div>
-					</section>
-				</main>
-			</div>
+					</div>
+				</section>
+			</main>
 		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-		<script type="text/javascript" src = "scripts/audio.js"></script>
-		<script type="text/javascript" src = "scripts/script.js"></script>
-		<script type="text/javascript" src = "scripts/resize_icons_player.js"></script>
-	</body>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script type="text/javascript" src = "scripts/audio.js"></script>
+	<script type="text/javascript" src = "scripts/script.js"></script>
+	<script type="text/javascript" src = "scripts/resize_icons_player.js"></script>
+</body>
 </html>

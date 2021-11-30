@@ -22,11 +22,11 @@ body{
 .light{
 	position: fixed;
 	z-index: 1000;
-	left: 10px;
-	top: 5px;
-	height: 60px;
-	background: rgba(0, 0, 0, 1.0);
-	/*transform: rotate(90deg);*/
+	left: -70px;
+	top: 220px;
+	width: 200px;
+	height: 10px;
+	transform: rotate(90deg);
 }
 	/*.light:before{
 		content: ' ';
@@ -40,9 +40,7 @@ body{
 	}*/
 	#rng_light{
 		position: absolute;
-		left: 10px;
-		top: 40px;
-		width: 200px;
+		width: 100%;
 		-webkit-appearance: none;
 		height: 2px;
 		outline: none;
@@ -51,8 +49,8 @@ body{
 	#rng_light::-webkit-slider-thumb{
 		background: url("../img/light1.png");
 		background-size: cover;
-		width: 30px;
-		height: 30px;
+		width: 4vh;
+		height: 4vh;
 		-webkit-appearance: none;
 		appearance: none;
 	}
@@ -96,9 +94,9 @@ header .container {
 			justify-content: center;
 		}
 			.text_key_nav{
-				font-size: 30px;
+				font-size: 2vw;
 				color: white;
-				margin: 40px;
+				margin: 0px 40px;
 			}
 			.text_key_nav:hover{
 				text-decoration: underline;
@@ -124,22 +122,28 @@ header .container {
 		/*main task*/
 		.player_block{
 			width: 100%;
-			height: 600px;
 			padding: 10px;
 			background: black;
 		}
-		.loading{
-			width: 100%;
-			height: 100%;
-			background: url("../img/loading_player.jpg");
-			background-size: contain;
-			background-position: center;
-			background-repeat: no-repeat;
-		}
-		#video{
-			width: 100%;
-			height: 100%;
-		}
+			.thumb-wrap {
+				position: relative;
+				padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+				height: 0;
+				overflow: hidden;
+				background: url("../img/loading_player.jpg");
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			.thumb-wrap iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border-width: 0;
+				outline-width: 0;
+			}
 		.add_inform{
 			display: flex;
 			justify-content: space-between;
@@ -148,9 +152,10 @@ header .container {
 		}
 			.text_add_inform{
 				margin-top: 7px;
-				background: rgba(0, 0, 0, 0.5);
+				background: rgba(0, 0, 0, 0.7);
 				padding: 20px;
-				font-size: 22px;
+				font-size: 1.5vw;
+				text-align: justify;
 				width: 60%;
 				height: 100%;
 				color: white;
@@ -160,23 +165,41 @@ header .container {
 				margin-top: 7px;
 				height: 100%;
 			}
-				.audio{
-					margin: 5px;
-					float: right;
-					border: 1px white solid;
-					background: white;
+				#audio_block{
+					display: flex; 
+					flex-direction: column; 
+					justify-content: flex-end; 
+					background:rgba(0, 0, 0, 0.8); 
+					border: 1px solid white; 
+					padding: 5px;
 				}
+					#title{
+						text-align: center; 
+						color:white; 
+						font-size: 1.7vw;
+					}
 					.button button{
 						margin: 0 5px;
 						margin: 5px 10px;
 						background: none;
 						border: 0;
-						width: 30px;
-						height: 30px;
+						width: 3vh;
+						height: 3vh;
 					}
 					.button button img{
 						width: 100%;
 						height: 100%;
+					}
+					#duration{
+						color: white;
+						font-size: 1.2vw;
+					}
+					.volume_block{
+						display: flex;
+						align-items: center;
+					}
+					.volume_p{
+						font-size: 1.7vh;
 					}
 					#rng_audio{
 						-webkit-appearance: none;
@@ -184,36 +207,39 @@ header .container {
 						outline: none;
 						height: 2px;
 						background: white;
-						margin-top: 8px;
 						margin-left: 5px;
+						width: 50%;
 					}
 					#rng_audio::-webkit-slider-thumb{
 						appearance: none;
-						width: 10px;
+						width: 15px;
 						background:white;
-						height: 10px;
-						border-radius: 5px;
+						height: 15px;
+						border-radius: 15px;
 						border: 1px solid grey;
 					}
-				.block_for_title_audio{
+				#block_for_title_audio{
+					background: rgba(0, 0, 0, 0.7);
 					padding: 5px;
 				}
 					.titles_audio{
 						width: 100%;
 						height: 100%;
-						padding: 2px;
+						padding: 0.2vh;
 						display: flex;
 						justify-content: flex-start;
 						text-align: center;
-						background: rgba(0, 0, 0, 0.5);
+		
 					}
 					.titles_audio p{
-						font-size: 20px;
-						padding: 5px 10px;
+						font-size: 1.4vw;
+						padding: 4px 10px;
 						color: white;
+						text-align: center;
 					}
 					.titles_audio img{
-						padding: 2px;
+						padding: 4px 0px;
+						padding-left: 5%;
 					}
 		/*catalog*/
 		#main_catalog{
@@ -296,17 +322,272 @@ header .container {
 				background-position: center;
 				border: 4px solid black;
 			}
-
-			/**/
-/*@media (max-width: 1100px){
+@media (min-width:2200px) and (orientation: landscape){
+	#rng_audio{
+		width: 50%;
+		height: 2px;
+		margin-left: 10px;
+	}
+	.button button{
+		margin: 5px 10px;
+		width: 4vh;
+		height: 4vh;
+	}
+	.volume_p{
+		font-size: 1.1vw;
+	}
+	#rng_audio::-webkit-slider-thumb{
+		width: 1.7vh;
+		height: 1.7vh;
+		border-radius: 1.7vh;
+	}
+	.header{
+		height: 10vh;
+	}
+	.logo_img{
+		height: 9.5vh;
+		width: 9.5vh;
+	}
+	.text_add_inform{
+		width: 70%;
+	}
+	.add_audio_for_film{
+		width: 30%;
+	}
+	.main{
+		padding-top: 10.5vh;
+	}
+	#rng_light::-webkit-slider-thumb{
+		width: 5vh;
+		height: 5vh;
+	}
+	.light{
+		left: -70px;
+		top: 300px;
+		width: 20vh;
+		height: 10px;
+	}
+}
+@media (max-width: 1350px) and (orientation: landscape)
+{
+	.text_add_inform p{
+		font-size: 1.7vw;
+	}
+	#rng_light::-webkit-slider-thumb{
+		width: 35px;
+		height: 35px;
+	}
+	#rng_audio::-webkit-slider-thumb{
+	appearance: none;
+	width: 2vh;
+	background:white;
+	height: 2vh;
+	border-radius: 15px;
+	}
+}
+@media (max-width: 1100px) and (orientation: landscape){
 	.container{
 		width: 80%;
 		padding: 0 20px;
 	}
+	.header{
+		height: 50px;
+	}
+	.logo_img{
+		height: 45px;
+		width: 45px;
+	}
+	.text_add_inform{
+		padding: 10px;
+	}
+	.text_add_inform p{
+		font-size: 2.1vw;
+	}
+	.text_key_nav{
+		font-size: 2.2vw;
+	}
+	#title{
+		font-size: 2.5vw;
+	}
+	#duration{
+		font-size: 1.6vw;
+	}
+	.titles_audio div p{
+		font-size: 1.9vw;
+	}
+	.main{
+		padding-top: 60px;
+	}
+	.volume_p{
+		font-size: 1.3vw;
+	}
+	.button{
+		margin-top: 3px;
+	}
+	.button button{
+		margin: 2px 5px;
+		background: none;
+		border: 0;
+		width: 25px;
+		height: 25px;
+	}
+	#rng_light::-webkit-slider-thumb{
+		width: 22px;
+		height: 22px;
+	}
+	.light{
+		left: -37px;
+		top: 100px;
+		width: 90px;
+		height: 10px;
+	}
 }
-@media (max-width: 900px){
+@media (max-width: 900px) and (orientation: landscape){
 	.container{
-		padding: 0 15px;
+		padding: 0 5px;
+		width: 90%;
+	}
+}
+@media (max-width: 750px) and (orientation: landscape){
+	.header{
+		height: 40px;
+	}
+	.main{
+		padding: 5px 1px;
+		padding-top: 50px;
+	}
+	.logo_img{
+		width: 35px;
+		height: 35px;
+	}
+	.text_add_inform{
+		width: 65%;
+	}
+	.thumb-wrap {
+		padding-bottom: 50%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */		
+	}
+	.add_audio_for_film{
+		width: 35%;
+	}
+	.button button{
+		width: 18px;
+		height: 18px;
+	}
+	#rng_audio{
+		width: 80px;
+		height: 2px;
+		margin-left: 2px;
+	}
+	.titles_audio img{
+		padding: 2px 0px;
+	}
+	.titles_audio div p{
+		padding: 2px 5px;
+	}
+	
+}
+@media (max-width: 650px) and (orientation: landscape){
+	.header{
+		height: 30px;
+	}
+	.container{
+		padding: 0px 5px;
+		width: 93%;
+	}
+	.main{
+		padding: 5px 1px;
+		padding-top: 35px;
+	}
+	.logo_img{
+		width: 25px;
+		height: 25px;
+	}
+	.text_add_inform{
+		width: 65%;
+	}
+	.thumb-wrap {
+		padding-bottom: 50%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */		
+	}
+	.add_audio_for_film{
+		width: 35%;
+	}
+	.button button{
+		width: 13px;
+		height: 13px;
+		margin: 3px 3px;
+	}
+	#rng_audio{
+		width: 80px;
+		height: 2px;
+		margin-left: 2px;
+	}
+	#title{
+		padding-bottom: 3px;
+	}
+	.titles_audio img{
+		padding: 2px 0px;
+	}
+	.titles_audio div p{
+		padding: 2px 5px;
+	}
+	.text_key_nav{
+		font-size: 2.5vw;
+		margin: 0px 20px;
+		margin-left: 10px;
+	}
+	#rng_light::-webkit-slider-thumb{
+		width: 17px;
+		height: 17px;
+	}
+	.light{
+		left: -28px;
+		top: 100px;
+		width: 70px;
+		height: 10px;
+	}
+}
+@media (max-height: 1250px) and (orientation: portrait)
+{
+	.container {
+		padding: 1px 10px;
 		width: 100%;
 	}
-}*/
+	.main{
+		min-height: 100%;
+		padding: 73px 0px;
+		padding-bottom: 5px;
+	}
+	body{
+		min-height: 100%;
+		height: 100%;
+	}
+	.header{
+		height: 70px;
+
+	}
+	.rng_light{
+
+	}
+	.logo_img{
+		height: 67px;
+		width: 67px;
+	}
+	.add_inform{
+		display: flex;
+		flex-direction: column;
+		background: rgba(0, 0, 0, 0.7);
+	}
+	.text_add_inform{
+		width: 100%;
+		padding: 2px;
+		background: none;
+	}
+	.text_key_nav{
+		font-size: 3vh;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	.text_add_inform p{
+		font-size: 1.7vh;
+	}
+}

@@ -17,6 +17,7 @@ function swap_music(test){
 	}, 1000);
 
 }
+
 function audio_start() {
 	document.getElementById('player').play();
 	current_time = 0;
@@ -70,6 +71,23 @@ function mute(){
 		document.getElementById('player').volume = volume
 		key_for_mute = 0;
 	}
+}
+type_of_button = "play";
+function swap_pause_play(block) {
+	if(type_of_button == "play"){
+		$(block).next().css('display','block');
+		$(block).css('display','none');
+		type_of_button = "pause";
+	} else if(type_of_button == "pause"){
+		$(block).prev().css('display','block');
+		$(block).css('display','none');
+		type_of_button = "play";
+	};
+}
+function volume(){
+	let vol = $('#player').prop('volume');
+	vol *= 100;
+	$('.volume_block p').text(Math.trunc(vol)+"%");
 }
 key_for_mute = 0;
 setTimeout(() => {
