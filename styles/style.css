@@ -95,6 +95,7 @@ header .container {
 		}
 			.text_key_nav{
 				font-size: 2vw;
+				font-family: hey;
 				color: white;
 				margin: 0px 40px;
 			}
@@ -160,6 +161,9 @@ header .container {
 				height: 100%;
 				color: white;
 			}
+			.text_add_inform p{
+				font-family: PT-Reg;
+			}
 			.add_audio_for_film{
 				width: 40%;
 				margin-top: 7px;
@@ -176,6 +180,7 @@ header .container {
 					#title{
 						text-align: center; 
 						color:white; 
+						font-family: Yanone;
 						font-size: 1.7vw;
 					}
 					.button button{
@@ -235,6 +240,7 @@ header .container {
 						font-size: 1.4vw;
 						padding: 4px 10px;
 						color: white;
+						font-family: Yanone;
 						text-align: center;
 					}
 					.titles_audio img{
@@ -653,3 +659,23 @@ header .container {
 			font-size: 2vh;
 		}
 }
+@font-face {
+    font-family: Open_Sans; /* Имя шрифта */
+    src: url("../fonts/OpenSans-VariableFont_wdth,wght.woff2"); /* Путь к файлу со шрифтом */
+ }
+ @font-face {
+    font-family: Lobster; /* Имя шрифта */
+    src: url("../fonts/Lobster-Regular.woff2"); /* Путь к файлу со шрифтом */
+ }
+ @font-face {
+    font-family: PT-Reg; /* Имя шрифта */
+    src: url("../fonts/PTSerif-Regular.woff2"); /* Путь к файлу со шрифтом */
+ }
+ @font-face {
+    font-family: hey; /* Имя шрифта */
+    src: url("../fonts/BalsamiqSans-Regular.ttf"); /* Путь к файлу со шрифтом */
+ }
+@font-face {
+    font-family: Yanone; /* Имя шрифта */
+    src: url("../fonts/YanoneKaffeesatz-VariableFont_wght.woff2"); /* Путь к файлу со шрифтом */
+ }
