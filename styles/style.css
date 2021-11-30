@@ -551,6 +551,7 @@ header .container {
 	.container {
 		padding: 1px 10px;
 		width: 100%;
+
 	}
 	.main{
 		min-height: 100%;
@@ -558,19 +559,25 @@ header .container {
 		padding-bottom: 5px;
 	}
 	body{
-		min-height: 100%;
+		min-height: 100vh;
 		height: 100%;
 	}
 	.header{
-		height: 70px;
+		height: 7vh;
 
+	}
+	.light{
+		position: absolute;
+		transform: none;
+		left: 30%;
+		top: 30px;
 	}
 	.rng_light{
 
 	}
 	.logo_img{
-		height: 67px;
-		width: 67px;
+		height: 6.5vh;
+		width: 6.5vh;
 	}
 	.add_inform{
 		display: flex;
@@ -588,6 +595,27 @@ header .container {
 		margin-right: 20px;
 	}
 	.text_add_inform p{
-		font-size: 1.7vh;
+		font-size: 2vh;
+	}
+	.page .container{
+		min-height: 100vh;
+		height: 100%;
+	}
+	.add_audio_for_film{
+		width: 100%;
+	}
+	#title{
+		font-size: 2vh ;
+	}
+	#block_for_title_audio{
+		display: grid;
+		grid-template-rows: 33.3% 33.3% 33.3%;
+		grid-template-columns: 33.3% 33.3% 33.3% ;
+	}
+	.titles_audio{
+		padding-top: 10px;
+	}
+	.titles_audio p{
+		font-size: 1.5vh;
 	}
 }
