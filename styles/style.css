@@ -626,7 +626,7 @@ header .container {
 @media (max-height: 850px) and (orientation: portrait){
 	#block_for_title_audio{
 		display: grid;
-		grid-template-rows: 33.3% 33.3% 33.3%;
+		grid-template-rows: auto auto auto;
 		grid-template-columns: 50% 50% ;
 	}
 	.titles_audio{
@@ -641,4 +641,15 @@ header .container {
 	.add_inform{
 		background: rgba(0, 0, 0, 0.8);
 	}
+	.titles_audio{
+		padding-top: 0px;
+	}
+	.titles_audio p, #duration, .volume_p{
+		font-size: 1.7vh;
+	}
+}
+@media (max-height: 850px) and (orientation: portrait){
+	.titles_audio p, #duration, .volume_p{
+			font-size: 2vh;
+		}
 }
