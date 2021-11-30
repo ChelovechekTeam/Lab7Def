@@ -546,7 +546,7 @@ header .container {
 		height: 10px;
 	}
 }
-@media (max-height: 1250px) and (orientation: portrait)
+@media (max-height: 1400px) and (orientation: portrait)
 {
 	.container {
 		padding: 1px 10px;
@@ -555,7 +555,7 @@ header .container {
 	}
 	.main{
 		min-height: 100%;
-		padding: 73px 0px;
+		padding: 7.3vh 0px;
 		padding-bottom: 5px;
 	}
 	body{
@@ -570,7 +570,7 @@ header .container {
 		position: absolute;
 		transform: none;
 		left: 30%;
-		top: 30px;
+		top: 4vh;
 	}
 	.rng_light{
 
@@ -596,6 +596,7 @@ header .container {
 	}
 	.text_add_inform p{
 		font-size: 2vh;
+		padding: 0px 10px;
 	}
 	.page .container{
 		min-height: 100vh;
@@ -615,7 +616,29 @@ header .container {
 	.titles_audio{
 		padding-top: 10px;
 	}
-	.titles_audio p{
+	.titles_audio p, #duration, .volume_p{
 		font-size: 1.5vh;
+	}
+	#rng_audio{
+		width: 80%;
+	}
+}
+@media (max-height: 850px) and (orientation: portrait){
+	#block_for_title_audio{
+		display: grid;
+		grid-template-rows: 33.3% 33.3% 33.3%;
+		grid-template-columns: 50% 50% ;
+	}
+	.titles_audio{
+		padding-top: 3px;
+	}
+	.text_add_inform p{
+		padding: 0px 5px;
+	}
+	.light{
+		display: none;
+	}
+	.add_inform{
+		background: rgba(0, 0, 0, 0.8);
 	}
 }
