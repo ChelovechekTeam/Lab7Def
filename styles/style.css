@@ -330,11 +330,17 @@ header .container {
 			}
 .scroll{
 	position: fixed;
+	padding: 6px;
 	bottom: 10px;
-	right: 30px;
-	width: 30px;
-	height: 30px;
+	right: 1vw;
+	width: 5vh;
+	height: 5vh;
+	border: 1px solid black;
+	border-radius: 40px;
 	background: white;
+}
+.scroll:hover{
+	border: 1px solid white;
 }
 @media (min-width:2200px) and (orientation: landscape){
 	#rng_audio{
